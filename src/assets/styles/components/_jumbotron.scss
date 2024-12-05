@@ -1,0 +1,14 @@
+@import '../variables';
+@import '../utils/functions';
+
+.jumbotron {
+  background-image: url(https://picsum.photos/id/180/1200/400.webp?grayscale);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 50vh;
+
+  &__text {
+    background-color: add-transparency($secondary, 0.8);
+  }
+}

@@ -1,0 +1,10 @@
+@import "../variables";
+
+.dialog {
+  background: $modal-background-color;
+
+  &__header {
+    color: white;
+    background: $modal-header-color;
+  }
+}

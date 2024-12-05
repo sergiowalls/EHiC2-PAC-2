@@ -1,0 +1,10 @@
+@import "bootstrap/scss/functions";
+@import "../variables";
+
+.button {
+  --bs-btn-hover-bg: #{$secondary};
+  --bs-btn-hover-border-color: #{shade-color($secondary, 10%)};
+  --bs-btn-active-color: white;
+  --bs-btn-active-bg: #{$tertiary};
+  --bs-btn-active-border-color: #{shade-color($tertiary, 20%)};
+}

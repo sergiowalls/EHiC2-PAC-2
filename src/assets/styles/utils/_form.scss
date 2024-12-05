@@ -1,0 +1,6 @@
+@import 'functions';
+
+.u-floating-label-size {
+  height: get-floating-label-height();
+  min-height: get-floating-label-height();
+}

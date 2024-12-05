@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <link rel="stylesheet" type="text/css" href="./assets/styles/main.scss"><!-- do not remove this line! -->
+  <title>Code & Shield Expo - Tickets</title>
+</head>
+<body>
+<include src="./views/header.html"></include>
+
+<div class="modal dialog" tabindex="-1" id="privacyPolicyModal">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header dialog__header">
+        <h5 class="modal-title">Privacy Policy</h5>
+        <button type="button" class="btn-close dialog__close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body dialog__body">
+        <include src="./views/privacy-policy.html"></include>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal dialog" tabindex="-1" id="termsOfServiceModal">
+  <div class="modal-dialog modal-dialog-centered modal-xl">
+    <div class="modal-content">
+      <div class="modal-header dialog__header">
+        <h5 class="modal-title">Terms of Service</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <include src="./views/terms-of-service.html"></include>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <h1 class="text-center py-3">Tickets</h1>
+
+  <div class="collage mb-4">
+    <img class="rounded collage__sideImage" src="https://picsum.photos/id/4/5000/3333.webp"/>
+    <img class="rounded collage__mainImage" src="https://picsum.photos/id/7/4728/3168.webp"/>
+    <img class="rounded collage__sideImage" src="https://picsum.photos/id/2/5000/3333.webp"/>
+  </div>
+
+  <p>Please fill out the form below to request a ticket. We will get back to you within 24 hours with a
+    confirmation.</p>
+  <form class="needs-validation" novalidate netlify name="ticket-request" action="/ticket-requested.html" method="POST">
+    <div class="row">
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="mb-3 form-floating">
+          <input type="text" class="form-control" id="name" name="name" placeholder="James" required>
+          <label for="name">Name</label>
+          <div class="invalid-feedback">
+            Name is required.
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-lg-3">
+        <div class="mb-3 form-floating">
+          <input type="text" class="form-control" id="surname" name="surname" placeholder="Smith" required>
+          <label for="surname">Surname</label>
+          <div class="invalid-feedback">
+            Surname is required.
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-6">
+        <div class="mb-3 form-floating">
+          <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+          <label for="email">Email address</label>
+          <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
+          <div class="invalid-feedback">
+            Please enter a valid email.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-7">
+        <div class="mb-3">
+          <div class="input-group">
+            <span class="input-group-text" id="linkedinURL">linkedin.com/in/</span>
+            <label for="linkedinProfile" class="d-none">LinkedIn profile</label>
+            <input type="text" class="form-control u-floating-label-size" id="linkedinProfile" name="linkedin"
+                   aria-describedby="linkedinURL linkedinProfileHelp" placeholder="james-smith">
+          </div>
+          <div class="form-text" id="linkedinProfileHelp">By writing down your LinkedIn profile URL you accept that Code
+            & Shield Expo may share it with other partners.
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-5">
+        <div class="mb-3 form-floating">
+          <select class="form-select" id="discountsAvailable" name="discount" aria-label="Available discounts">
+            <option selected>No discount</option>
+            <option value="academic">Academic affiliation</option>
+            <option value="65">Older than 65</option>
+            <option value="20">Younger than 20</option>
+          </select>
+          <label for="discountsAvailable">Available discounts</label>
+          <div id="availableDiscountsHelp" class="form-text">If more than one applies, choose any once since all
+            options
+            apply the same discount.
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col">
+        <div class="mb-3 form-floating">
+          <textarea class="form-control" placeholder="Leave a comment here" id="comments" name="comments"></textarea>
+          <label for="comments">Comments and requests</label>
+          <div id="commentsHelp" class="form-text">We'll do our best to accommodate your needs.</div>
+        </div>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-12 col-lg-9">
+        <div class="mb-3 form-check">
+          <input class="form-check-input" type="checkbox" value="yes" id="privacyPolicy" name="privacyPolicy" required>
+          <label class="form-check-label" for="privacyPolicy">
+            I have read and agree to Code & Shield Expo <a href="#" class="u-no-link" data-bs-toggle="modal"
+                                                           data-bs-target="#termsOfServiceModal">Terms of Service</a>
+            and <a href="#" class="u-no-link" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Privacy
+            Policy</a>.
+          </label>
+          <div class="invalid-feedback">
+            You need to accept.
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-lg-3 text-end">
+        <button type="submit" class="btn btn-primary button">
+          <i class="fa-regular fa-paper-plane" aria-hidden="true"></i>
+          Request ticket
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
+
+<include src="./views/footer.html"></include>
+<script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+<script type="module" src="./assets/scripts/tickets.js"></script><!-- do not remove this line! -->
+</body>
+</html>

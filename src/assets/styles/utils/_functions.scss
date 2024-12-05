@@ -1,0 +1,7 @@
+@function add-transparency($color, $alpha) {
+  @return rgba($color, $alpha)
+}
+
+@function get-floating-label-height() {
+  @return calc(3.5rem + calc(var(--bs-border-width) * 2))
+}
