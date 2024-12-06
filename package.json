@@ -48,5 +48,9 @@
     "stylelint-config-recommended-scss": "^14.1.0",
     "stylelint-scss": "^6.10.0",
     "stylelint-selector-bem-pattern": "^4.0.1"
+  },
+  "dependencies": {
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3"
   }
 }
