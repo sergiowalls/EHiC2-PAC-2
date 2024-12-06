@@ -7,11 +7,14 @@ $font-family-serif: "Georgia", "Times New Roman", serif;
 
 $primary: #2e30ff;
 $secondary: #fe5200;
+$tertiary: #8400aa;
 
 $theme-colors: (
   "primary": $primary,
   "secondary": $secondary,
+  "tertiary": $tertiary,
 );
 
 $nav-link-color: $primary;
 $nav-link-hover-color: $secondary;
+$code-color: $tertiary;

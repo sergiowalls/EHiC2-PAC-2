@@ -23,8 +23,11 @@
  */
 
 @import "utils/layout";
+@import "utils/functions";
+@import "components/article";
 @import "components/body";
 @import "components/speakerList";
+@import "components/jumbotron";
 
 /**
  * Do NOT include anything else in this file!

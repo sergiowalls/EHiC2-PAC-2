@@ -1,0 +1,17 @@
+@import '../variables';
+
+.article {
+  &__paragraph {
+    @extend .my-4;
+  }
+
+  &__listItem {
+    @extend .border-0;
+    @extend .py-3;
+
+    &::before {
+      @extend .fw-bold;
+      color: $secondary;
+    }
+  }
+}
