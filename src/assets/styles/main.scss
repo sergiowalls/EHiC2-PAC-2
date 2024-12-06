@@ -19,11 +19,12 @@
 // @import "@some-company/some-node-module";
 
 /**
- * Import layouts
+ * Import utils
  * It's a best practice to use a different partial for each page
  */
 
-@import "layouts/home";
+@import "utils/layout";
+@import "components/body";
 
 /**
  * Do NOT include anything else in this file!
