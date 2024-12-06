@@ -1,0 +1,10 @@
+.speakerList {
+  display: flex;
+  flex-wrap: wrap;
+  grid-gap: 30px;
+
+  &__speaker {
+    flex: 1 395px;
+    min-width: 0;
+  }
+}
