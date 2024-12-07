@@ -10,6 +10,34 @@
 <body>
 <include src="./views/header.html"></include>
 
+<div class="modal" tabindex="-1" id="privacyPolicyModal">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Privacy Policy</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <include src="./views/privacy-policy.html"></include>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="modal" tabindex="-1" id="termsOfServiceModal">
+  <div class="modal-dialog modal-xl">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title">Terms of Service</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+        <include src="./views/terms-of-service.html"></include>
+      </div>
+    </div>
+  </div>
+</div>
+
 <div class="container">
   <h1 class="text-center py-3">Tickets</h1>
   <p>Please fill out the form below to request a ticket. We will get back to you within 24 hours with a
@@ -89,8 +117,9 @@
         <div class="mb-3 form-check">
           <input class="form-check-input" type="checkbox" value="yes" id="privacyPolicy" name="privacyPolicy" required>
           <label class="form-check-label" for="privacyPolicy">
-            I have read and agree to Code & Shield Expo <a href="#">Terms of Service</a> and <a href="#">Privacy
-            Policy</a>.
+            I have read and agree to Code & Shield Expo <a href="#" data-bs-toggle="modal"
+                                                           data-bs-target="#termsOfServiceModal">Terms of Service</a>
+            and <a href="#" data-bs-toggle="modal" data-bs-target="#privacyPolicyModal">Privacy Policy</a>.
           </label>
           <div class="invalid-feedback">
             You need to accept.
@@ -106,5 +135,6 @@
 
 <include src="./views/footer.html"></include>
 <script type="module" src="./assets/scripts/main.js"></script><!-- do not remove this line! -->
+<script type="module" src="./assets/scripts/tickets.js"></script><!-- do not remove this line! -->
 </body>
 </html>
