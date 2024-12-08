@@ -1,0 +1,35 @@
+.collage {
+  container-type: size;
+  height: 30dvh;
+  text-align: center;
+
+  &__mainImage, &__sideImage {
+    width: 100cqw;
+    height: 33cqh;
+    object-fit: cover;
+  }
+
+  @container (min-width: 600px) {
+    &__mainImage {
+      width: 32cqw;
+      height: 100cqh;
+    }
+
+    &__sideImage {
+      width: 33cqw;
+      height: 60cqh;
+    }
+  }
+
+  @container (min-width: 900px) {
+    &__sideImage {
+      height: 80cqh;
+    }
+  }
+
+  @container (min-width: 1200px) {
+    &__sideImage {
+      height: 100cqh;
+    }
+  }
+}
